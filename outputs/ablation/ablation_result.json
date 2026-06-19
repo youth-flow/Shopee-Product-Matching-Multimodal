@@ -1,0 +1,41 @@
+{
+  "ablation_results": [
+    {
+      "alpha": 1.0,
+      "mode": "image-only",
+      "mAP@50": 0.6455841571183842
+    },
+    {
+      "alpha": 0.8,
+      "mode": "fusion",
+      "mAP@50": 0.7426343978470615
+    },
+    {
+      "alpha": 0.6,
+      "mode": "fusion",
+      "mAP@50": 0.8045793632885304
+    },
+    {
+      "alpha": 0.4,
+      "mode": "fusion",
+      "mAP@50": 0.8167549294853526
+    },
+    {
+      "alpha": 0.2,
+      "mode": "fusion",
+      "mAP@50": 0.7722158647501771
+    },
+    {
+      "alpha": 0.0,
+      "mode": "text-only",
+      "mAP@50": 0.6740094493707639
+    }
+  ],
+  "best_alpha": 0.4,
+  "best_mAP": 0.8167549294853526,
+  "analysis": {
+    "clip_image_only": 0.6455841571183842,
+    "clip_text_only": 0.6740094493707639,
+    "text_contribution": 0.17117077236696832
+  }
+}

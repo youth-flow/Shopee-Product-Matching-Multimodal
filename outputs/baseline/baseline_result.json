@@ -1,0 +1,6 @@
+{
+  "method": "baseline_resnet50",
+  "mAP@50": 0.659178656745555,
+  "val_samples": 7062,
+  "val_groups": 2203
+}

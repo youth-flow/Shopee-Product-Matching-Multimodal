@@ -1,0 +1,62 @@
+# Python caches and environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Local notebooks and OS metadata
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+
+# Archives and duplicate exports
+*.zip
+*.7z
+*.rar
+
+# Raw dataset files are reproducible from Kaggle and too large for Git.
+data/*
+!data/
+!data/README.md
+
+# Pretrained models and checkpoints are downloaded or regenerated locally.
+models/*
+!models/
+!models/README.md
+
+# Keep only lightweight experiment summaries and figures.
+outputs/*
+!outputs/
+!outputs/README.md
+!outputs/baseline/
+!outputs/baseline/baseline_result.json
+!outputs/ablation/
+!outputs/ablation/ablation_result.json
+!outputs/enhanced/
+!outputs/enhanced/training_result.json
+!outputs/enhanced_frozen/
+!outputs/enhanced_frozen/training_result.json
+!outputs/visualizations/
+!outputs/visualizations/*.png
+
+# Heavy generated artifacts.
+outputs/**/checkpoints/
+outputs/**/*.pth
+outputs/**/*.pt
+outputs/**/*.bin
+outputs/**/*.npy
+outputs/**/*predictions*.json
+outputs/**/*.pkl
+outputs/**/*.pickle
+
+# Common model/data artifacts if generated elsewhere in the repo.
+*.ckpt
+*.safetensors
+*.onnx
+*.h5
+*.hdf5
+*.npz
