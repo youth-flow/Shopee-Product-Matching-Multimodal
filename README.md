@@ -48,20 +48,20 @@ flowchart TB
     accTitle: Shopee Multimodal Matching Workflow
     accDescr: This diagram shows the end-to-end workflow from public dataset and pretrained models to retrieval evaluation and visualization artifacts.
 
-    dataset([公开数据集]) --> split[按 label_group 划分训练/验证集]
-    weights([预训练模型]) --> feature_extract[提取图像与文本特征]
+    dataset(["公开数据集"]) --> split["按 label_group 划分训练/验证集"]
+    weights(["预训练模型"]) --> feature_extract["提取图像与文本特征"]
     split --> feature_extract
 
-    feature_extract --> baseline[ResNet50 图像 baseline]
-    feature_extract --> clip_ablation[CLIP 图文消融实验]
-    feature_extract --> arcface_train[ArcFace 多模态训练]
+    feature_extract --> baseline["ResNet50 图像 baseline"]
+    feature_extract --> clip_ablation["CLIP 图文消融实验"]
+    feature_extract --> arcface_train["ArcFace 多模态训练"]
 
-    baseline --> knn[KNN 相似度检索]
+    baseline --> knn["KNN 相似度检索"]
     clip_ablation --> knn
     arcface_train --> knn
 
-    knn --> metric[mAP@50 评估]
-    metric --> figures[结果图表与检索样例]
+    knn --> metric["mAP@50 评估"]
+    metric --> figures["结果图表与检索样例"]
 
     classDef source fill:#ede9fe,stroke:#7c3aed,stroke-width:2px,color:#3b0764
     classDef process fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e3a5f
